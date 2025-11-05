@@ -1,0 +1,3 @@
+## Quartus Project File (minimal)
+PROJECT_REVISION = lab6_kg
+QUARTUS_VERSION = "20.1.1"

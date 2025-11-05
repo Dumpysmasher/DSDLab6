@@ -1,0 +1,15 @@
+## Minimal Quartus Settings File
+
+# Device and family
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+
+# Top-level entity
+set_global_assignment -name TOP_LEVEL_ENTITY top
+
+# EDA simulation tool
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog HDL)"
+
+# Source files
+set_global_assignment -name VERILOG_FILE src/top.sv
+set_global_assignment -name VERILOG_FILE sim/top_tb.sv

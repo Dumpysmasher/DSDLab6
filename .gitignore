@@ -1,0 +1,20 @@
+# Ignore common Quartus/ModelSim build outputs and editor files
+/.vscode/
+/output_files/
+/db/
+/incremental_db/
+*.qpf_old
+*.qws
+*.sopcinfo
+*.sof
+*.jed
+*.rpt
+*.jou
+*.qws
+modelsim.ini
+*.wlf
+*.vcd
+*.log
+*.bak
+Thumbs.db
+desktop.ini
