@@ -2,6 +2,7 @@ module register_file (
 	input  logic        clk, rst, WE3,
 	input  logic [4:0]  A1, A2, A3, 
 	input  logic [31:0] WD3,
+	input  logic [4:0]  prodeInd,
 	output logic [31:0] RD1, RD2,
 	output logic [31:0] prode
 );
@@ -15,9 +16,9 @@ module register_file (
 	assign RD2   = rf[A2];
 
 
-	assign prode = rf[1];
+	assign prode = rf[prodeInd];
 
-	always_ff @(posedge clk) begin
+	always @(posedge clk) begin
 		if (WE3) rf[A3] <= WD3;
 	end
 endmodule

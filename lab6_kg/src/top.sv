@@ -1,15 +1,99 @@
 module top(
-    input  logic clk,
-    input  logic rst,
-    output logic [7:0] led
+    input  logic        clk,
+    input  logic        rst,
+    input  logic [1:0]  sw,  // selects instruction: 1=LW example, 2=SW example
+    output logic [31:0] ALUResult,             // observable for pre-lab
+    output logic [31:0] RD1, RD2,              // RF read ports (visible)
+    output logic [31:0] prode_register_file,   // RF[1] probe
+    output logic [31:0] prode_data_memory,     // DM[2] probe
+    output logic [6:0]  display_led            // in-lab (seven-seg segments)
 );
 
-    // Simple 8-bit counter — synthesizable
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst)
-            led <= 8'h00;
-        else
-            led <= led + 1'b1;
+    // I-type instruction examples from the lab handout
+    // LW: op=010101, rs=00000, rt=00001, imm=...0101 (5)
+    localparam logic [31:0] INST_LW = 32'b010101_00000_00001_0000_0000_0000_0101;
+    // SW: op=010100, rs=00000, rt=00110, imm=...0010 (2)
+    localparam logic [31:0] INST_SW = 32'b010100_00000_00110_0000_0000_0000_0010;
+
+    logic [31:0] instr;
+    always_comb begin
+        unique case (sw)
+            2'd1: instr = INST_LW;
+            2'd2: instr = INST_SW;
+            default: instr = 32'b0; // NOP / no-op
+        endcase
     end
+
+    // Instruction fields
+    logic [5:0]  op;
+    logic [4:0]  rs, rt, rd;
+    logic [15:0] imm;
+    assign op  = instr[31:26];
+    assign rs  = instr[25:21];
+    assign rt  = instr[20:16];
+    assign rd  = instr[15:11];
+    assign imm = instr[15:0];
+
+    // Control signals mapped from op: {RegDst, ALUSrc, ALUControl[2:0], MemtoReg}
+    logic RegDst, ALUSrc;
+    logic [2:0] ALUControl;
+    logic MemtoReg;
+    assign RegDst    = op[5];
+    assign ALUSrc    = op[4];
+    assign ALUControl= op[3:1];
+    assign MemtoReg  = op[0];
+
+    // For this lab's two ops: LW (MemtoReg=1) writes reg; SW (MemtoReg=0) writes memory
+    logic RegWrite, MemWrite;
+    assign RegWrite = MemtoReg;     // LW:1, SW:0
+    assign MemWrite = ~MemtoReg;    // LW:0, SW:1
+
+    // Datapath wires
+    logic [31:0] signImm;
+    logic [4:0]  writeReg;
+    logic [31:0] srcB;
+    logic [31:0] memRD;
+    logic [31:0] wd3;
+
+    // Modules
+    sign_extend u_se(
+        .imm16(imm),
+        .signimm(signImm)
+    );
+
+    mux_regdst u_mux_regdst(
+        .sel(RegDst), .rt(rt), .rd(rd), .y(writeReg)
+    );
+
+    register_file u_rf(
+        .clk(clk), .rst(rst), .WE3(RegWrite),
+        .A1(rs), .A2(rt), .A3(writeReg),
+        .WD3(wd3),
+        .RD1(RD1), .RD2(RD2),
+        .prode(prode_register_file)
+    );
+
+    mux_alusrc u_mux_alusrc(
+        .sel(ALUSrc), .d0(RD2), .d1(signImm), .y(srcB)
+    );
+
+    ALU u_alu(
+        .SrcA(RD1), .SrcB(srcB), .ALUControl(ALUControl), .ALUResult(ALUResult)
+    );
+
+    data_memory u_dm(
+        .clk(clk), .rst(rst),
+        .A(ALUResult), .WD(RD2), .WE(MemWrite),
+        .RD(memRD), .prode(prode_data_memory)
+    );
+
+    mux_memtoreg u_mux_m2r(
+        .sel(MemtoReg), .d0(ALUResult), .d1(memRD), .y(wd3)
+    );
+
+    // Display: show RF[1] low hex digit
+    display u_disp(
+        .data_in(prode_register_file), .segments(display_led)
+    );
 
 endmodule
