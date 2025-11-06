@@ -1,0 +1,80 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Clanka/Documents/School/Fall2025/DSD/Lab/DSDLab6/lab6_kg/simulation/qsim
+vhard_block
+Z1 !s110 1762381641
+!i10b 1
+!s100 cNma[JO113R=7?@JbNOG51
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I>T9m>5QS@[h2Q^hPE1LIB3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1762381638
+Z5 8lab6_kg.vo
+Z6 Flab6_kg.vo
+!i122 20
+L0 7022 34
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1762381641.000000
+Z9 !s107 lab6_kg.vo|
+Z10 !s90 -work|work|lab6_kg.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vtop
+R1
+!i10b 1
+!s100 @OlW3T=RlP=4dk]`aNWZ62
+R2
+IZGhMU]?YB;ge9nLb>IU[o1
+R3
+R0
+R4
+R5
+R6
+!i122 20
+L0 32 6989
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vtop_vlg_vec_tst
+R1
+!i10b 1
+!s100 WT[A]zha__B]o[6W^in^I1
+R2
+I;N0:gMWH;B8Xn;hTaVF5c2
+R3
+R0
+w1762381636
+8waveform_top.vwf.vt
+Fwaveform_top.vwf.vt
+!i122 21
+L0 30 66
+R7
+r1
+!s85 0
+31
+R8
+!s107 waveform_top.vwf.vt|
+!s90 -work|work|waveform_top.vwf.vt|
+!i113 1
+R11
+R12
