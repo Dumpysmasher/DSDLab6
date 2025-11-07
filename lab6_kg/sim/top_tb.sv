@@ -42,13 +42,13 @@ module top_tb();
             $fatal;
         end
 
-        // Test SW: store RF[6] (init=6) -> DM[2]
+        // Test SW: store RF[2] (init=2) -> DM[2]
         sw = 2'd2; // select SW instruction
         @(posedge clk); // memory write occurs here
         #1;
-        $display("After SW: DM[2] = %0d (expect 6)", prode_data_memory);
-        if (prode_data_memory !== 32'd6) begin
-            $error("SW failed: DM[2]=%0d, expected 6", prode_data_memory);
+        $display("After SW: DM[2] = %0d (expect 2)", prode_data_memory);
+        if (prode_data_memory !== 32'd2) begin
+            $error("SW failed: DM[2]=%0d, expected 2", prode_data_memory);
             $fatal;
         end
 

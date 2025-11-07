@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/Clanka/Documents/School/Fall2025/DSD/Lab/DSDLab6/lab6_kg
 vALU
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1762381384
+Z2 !s110 1762474497
 !i10b 1
 !s100 HENHg9_Rb<:3==D028_f82
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -22,13 +22,13 @@ R0
 w1762373851
 8ALU.sv
 FALU.sv
-!i122 6
+!i122 7
 L0 1 13
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1762381384.000000
+Z6 !s108 1762474497.000000
 !s107 sim/top_tb.sv|top.sv|sign_extend.sv|mux_regdst.sv|mux_alusrc.sv|mux_memtoreg.sv|display.sv|data_memory.sv|register_file.sv|ALU.sv|
 Z7 !s90 -sv|ALU.sv|register_file.sv|data_memory.sv|display.sv|mux_memtoreg.sv|mux_alusrc.sv|mux_regdst.sv|sign_extend.sv|top.sv|sim/top_tb.sv|
 !i113 1
@@ -45,10 +45,10 @@ I0hkHjPdnkmY^biWS?cEDn0
 R4
 S1
 R0
-w1762381130
+w1762381997
 8data_memory.sv
 Fdata_memory.sv
-!i122 6
+!i122 7
 L0 1 28
 R5
 r1
@@ -73,7 +73,7 @@ R0
 w1762373830
 8display.sv
 Fdisplay.sv
-!i122 6
+!i122 7
 L0 1 26
 R5
 r1
@@ -95,11 +95,11 @@ IT0gO9?FI3IREMXD0R`ig61
 R4
 S1
 R0
-w1762377690
+Z10 w1762382002
 8mux_alusrc.sv
 Fmux_alusrc.sv
-!i122 6
-Z10 L0 1 10
+!i122 7
+Z11 L0 1 10
 R5
 r1
 !s85 0
@@ -120,11 +120,11 @@ I:m4ZG@?Wo51P`zYU0C_iS2
 R4
 S1
 R0
-w1762377676
+R10
 8mux_memtoreg.sv
 Fmux_memtoreg.sv
-!i122 6
-R10
+!i122 7
+R11
 R5
 r1
 !s85 0
@@ -145,11 +145,11 @@ IYZWhAeX8de5Y1WVMeAGZb2
 R4
 S1
 R0
-w1762377705
+R10
 8mux_regdst.sv
 Fmux_regdst.sv
-!i122 6
-R10
+!i122 7
+R11
 R5
 r1
 !s85 0
@@ -170,10 +170,10 @@ IKCc_Y3f>[:lm>J]aZ3YNO2
 R4
 S1
 R0
-w1762381118
+w1762382003
 8register_file.sv
 Fregister_file.sv
-!i122 6
+!i122 7
 L0 1 24
 R5
 r1
@@ -187,7 +187,7 @@ o-sv
 R8
 vsign_extend
 R1
-Z11 !s110 1762381385
+R2
 !i10b 1
 !s100 ci7J1?WGMF0<1<jB;OZdd1
 R3
@@ -195,10 +195,10 @@ I:1>n2aPmMRI9D>6keKgL<3
 R4
 S1
 R0
-w1762374312
+R10
 8sign_extend.sv
 Fsign_extend.sv
-!i122 6
+!i122 7
 L0 1 8
 R5
 r1
@@ -212,18 +212,18 @@ o-sv
 R8
 vtop
 R1
-R11
+R2
 !i10b 1
-!s100 >QlhmY2PQKiN?C<j>D_=^3
+!s100 WfNQab_biJLzZVzg_@iUn1
 R3
-ImZZHV4<a@Ne^[Si_<JQ5b3
+IDVFTF??ZL66FDjVg?M3`:3
 R4
 S1
 R0
-w1762381148
+w1762474470
 8top.sv
 Ftop.sv
-!i122 6
+!i122 7
 L0 1 114
 R5
 r1
@@ -237,18 +237,18 @@ o-sv
 R8
 vtop_tb
 R1
-R11
+R2
 !i10b 1
-!s100 IWZk98>zohE8^eD2E<jFS3
+!s100 G7N2V4dbV_]U3_^BQ8hoJ0
 R3
-IY<eL`dW1eVJ]0AdBU1?Oh0
+Id?A2D8a^_B`nZeN8FHH9<0
 R4
 S1
 R0
-w1762374353
+w1762474489
 8sim/top_tb.sv
 Fsim/top_tb.sv
-!i122 6
+!i122 7
 L0 3 57
 R5
 r1
