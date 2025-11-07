@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/Clanka/Documents/School/Fall2025/DSD/Lab/DSDLab6/lab6_kg
 vALU
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1762474497
+Z2 !s110 1762475616
 !i10b 1
 !s100 HENHg9_Rb<:3==D028_f82
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -22,13 +22,13 @@ R0
 w1762373851
 8ALU.sv
 FALU.sv
-!i122 7
+!i122 8
 L0 1 13
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1762474497.000000
+Z6 !s108 1762475615.000000
 !s107 sim/top_tb.sv|top.sv|sign_extend.sv|mux_regdst.sv|mux_alusrc.sv|mux_memtoreg.sv|display.sv|data_memory.sv|register_file.sv|ALU.sv|
 Z7 !s90 -sv|ALU.sv|register_file.sv|data_memory.sv|display.sv|mux_memtoreg.sv|mux_alusrc.sv|mux_regdst.sv|sign_extend.sv|top.sv|sim/top_tb.sv|
 !i113 1
@@ -48,7 +48,7 @@ R0
 w1762381997
 8data_memory.sv
 Fdata_memory.sv
-!i122 7
+!i122 8
 L0 1 28
 R5
 r1
@@ -64,17 +64,17 @@ vdisplay
 R1
 R2
 !i10b 1
-!s100 STHA9h:O>G9NaZd?j0c=l2
+!s100 oRW7nTS3C:5m;D^XKazL01
 R3
-Ih2^Y30EV[@lZ:c4`VRZ1V3
+IPIz3A<Of1959J2:mPX:;^1
 R4
 S1
 R0
-w1762373830
+w1762475490
 8display.sv
 Fdisplay.sv
-!i122 7
-L0 1 26
+!i122 8
+L0 1 33
 R5
 r1
 !s85 0
@@ -98,7 +98,7 @@ R0
 Z10 w1762382002
 8mux_alusrc.sv
 Fmux_alusrc.sv
-!i122 7
+!i122 8
 Z11 L0 1 10
 R5
 r1
@@ -123,7 +123,7 @@ R0
 R10
 8mux_memtoreg.sv
 Fmux_memtoreg.sv
-!i122 7
+!i122 8
 R11
 R5
 r1
@@ -148,7 +148,7 @@ R0
 R10
 8mux_regdst.sv
 Fmux_regdst.sv
-!i122 7
+!i122 8
 R11
 R5
 r1
@@ -173,7 +173,7 @@ R0
 w1762382003
 8register_file.sv
 Fregister_file.sv
-!i122 7
+!i122 8
 L0 1 24
 R5
 r1
@@ -198,7 +198,7 @@ R0
 R10
 8sign_extend.sv
 Fsign_extend.sv
-!i122 7
+!i122 8
 L0 1 8
 R5
 r1
@@ -214,17 +214,17 @@ vtop
 R1
 R2
 !i10b 1
-!s100 WfNQab_biJLzZVzg_@iUn1
+!s100 HS`zd7Dd_Z<CFo6o69ShP2
 R3
-IDVFTF??ZL66FDjVg?M3`:3
+IQ`?1DSH2M>K60C;?:njjd3
 R4
 S1
 R0
-w1762474470
+w1762475586
 8top.sv
 Ftop.sv
-!i122 7
-L0 1 114
+!i122 8
+L0 1 121
 R5
 r1
 !s85 0
@@ -239,16 +239,16 @@ vtop_tb
 R1
 R2
 !i10b 1
-!s100 G7N2V4dbV_]U3_^BQ8hoJ0
+!s100 DIBQ3z1f@]I5Ae7d_WPSY3
 R3
-Id?A2D8a^_B`nZeN8FHH9<0
+IQ^_]N7182z3[gLKTkLSSE3
 R4
 S1
 R0
-w1762474489
+w1762475602
 8sim/top_tb.sv
 Fsim/top_tb.sv
-!i122 7
+!i122 8
 L0 3 57
 R5
 r1

@@ -1,5 +1,5 @@
 # vsim -c -do "run 2000ns; quit" top_tb 
-# Start time: 19:14:59 on Nov 06,2025
+# Start time: 19:33:38 on Nov 06,2025
 # Loading sv_std.std
 # Loading work.top_tb
 # Loading work.top
@@ -13,10 +13,10 @@
 # Loading work.display
 # run 2000ns
 # Starting I-type LW/SW simulation...
-# After LW: RF[1] = 5 (expect 5)
-# After SW: DM[2] = 2 (expect 2)
+# After LW: RF[1] = 8 (expect 8)
+# After SW: DM[2] = 0 (expect 0)
 # Simulation PASSED.
 # ** Note: $finish    : sim/top_tb.sv(56)
 #    Time: 46 ns  Iteration: 0  Instance: /top_tb
-# End time: 19:15:00 on Nov 06,2025, Elapsed time: 0:00:01
+# End time: 19:33:40 on Nov 06,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0

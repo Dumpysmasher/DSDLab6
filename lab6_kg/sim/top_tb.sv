@@ -32,23 +32,23 @@ module top_tb();
         repeat (3) @(posedge clk);
         rst = 0;
 
-        // Test LW: load DM[5] -> RF[1]
+        // Test LW (Board 860): load DM[8] -> RF[1]
         sw = 2'd1; // select LW instruction
         @(posedge clk); // writeback occurs here
         #1; // small delay for visibility
-        $display("After LW: RF[1] = %0d (expect 5)", prode_register_file);
-        if (prode_register_file !== 32'd5) begin
-            $error("LW failed: RF[1]=%0d, expected 5", prode_register_file);
+        $display("After LW: RF[1] = %0d (expect 8)", prode_register_file);
+        if (prode_register_file !== 32'd8) begin
+            $error("LW failed: RF[1]=%0d, expected 8", prode_register_file);
             $fatal;
         end
 
-        // Test SW: store RF[2] (init=2) -> DM[2]
+        // Test SW (Board 860): store RF[0] (init=0) -> DM[2]
         sw = 2'd2; // select SW instruction
         @(posedge clk); // memory write occurs here
         #1;
-        $display("After SW: DM[2] = %0d (expect 2)", prode_data_memory);
-        if (prode_data_memory !== 32'd2) begin
-            $error("SW failed: DM[2]=%0d, expected 2", prode_data_memory);
+        $display("After SW: DM[2] = %0d (expect 0)", prode_data_memory);
+        if (prode_data_memory !== 32'd0) begin
+            $error("SW failed: DM[2]=%0d, expected 0", prode_data_memory);
             $fatal;
         end
 

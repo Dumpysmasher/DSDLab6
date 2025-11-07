@@ -10,10 +10,15 @@ module top(
 );
 
 	// I-type instruction examples from the lab handout
-	// LW: op=010101, rs=00000, rt=00001, imm=...0101 (5)
-	localparam logic [31:0] INST_LW = 32'b010101_00000_00001_0000_0000_0000_0101;
-	// SW: op=010100, rs=00000, rt=00010, imm=...0010 (2)  -- store RF[2] -> DM[2]
-	localparam logic [31:0] INST_SW = 32'b010100_00000_00010_0000_0000_0000_0010;
+	// --- Board 512 (previous) ---
+	// localparam logic [31:0] INST_LW = 32'b010101_00000_00001_0000_0000_0000_0101; // LW DM[5] -> RF[1]
+	// localparam logic [31:0] INST_SW = 32'b010100_00000_00010_0000_0000_0000_0010; // SW RF[2] -> DM[2]
+
+	// --- Board 860 (current) ---
+	// LW: op=010101, rs=00000, rt=00001, imm=...1000 (8)  -- load DM[8] -> RF[1]
+	localparam logic [31:0] INST_LW = 32'b010101_00000_00001_0000_0000_0000_1000;
+	// SW: op=010100, rs=00000, rt=00000, imm=...0010 (2)  -- store RF[0] -> DM[2]
+	localparam logic [31:0] INST_SW = 32'b010100_00000_00000_0000_0000_0000_0010;
 
 
 	logic [31:0] instr;
@@ -27,13 +32,15 @@ module top(
 		unique case (sw)
 			2'b01: begin 
 				instr = INST_LW;
-				memProdeInd = 8'd5; // observe DM[5]
+				// Board 860: observe DM[8] and RF[1]
+				memProdeInd = 8'd8; // observe DM[8]
 				regProdeInd = 5'd1; // observe RF[1]
 			end
 			2'b10: begin
 				instr = INST_SW;
+				// Board 860: observe DM[2] and RF[0]
 				memProdeInd = 8'd2; // observe DM[2]
-				regProdeInd = 5'd2; // observe RF[2]
+				regProdeInd = 5'd0; // observe RF[0]
 			end
 			default: /* NOP */ ;
 		endcase
