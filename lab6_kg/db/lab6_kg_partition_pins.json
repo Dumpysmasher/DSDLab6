@@ -4,15 +4,11 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "ALUResult[0]",
-					"strict" : false
-				},
-				{
 					"name" : "ALUResult[1]",
 					"strict" : false
 				},
 				{
-					"name" : "ALUResult[2]",
+					"name" : "ALUResult[3]",
 					"strict" : false
 				},
 				{
@@ -428,11 +424,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "sw[0]",
+					"name" : "sw[1]",
 					"strict" : false
 				},
 				{
-					"name" : "sw[1]",
+					"name" : "sw[0]",
 					"strict" : false
 				},
 				{

@@ -11,21 +11,22 @@
 # Or add a call to source it from any build script that runs Quartus Tcl.
 
 # Seven-segment display (display_led[0..6])
-set_location_assignment PIN_G18  -to top.display_led[0]
-set_location_assignment PIN_F22  -to top.display_led[1]
-set_location_assignment PIN_E17  -to top.display_led[2]
-set_location_assignment PIN_L26  -to top.display_led[3]
-set_location_assignment PIN_L25  -to top.display_led[4]
-set_location_assignment PIN_J22  -to top.display_led[5]
-set_location_assignment PIN_H22  -to top.display_led[6]
+set_location_assignment PIN_G18  -to display_led[0]
+set_location_assignment PIN_F22  -to display_led[1]
+set_location_assignment PIN_E17  -to display_led[2]
+set_location_assignment PIN_L26  -to display_led[3]
+set_location_assignment PIN_L25  -to display_led[4]
+set_location_assignment PIN_J22  -to display_led[5]
+set_location_assignment PIN_H22  -to display_led[6]
 
 # Switch inputs and reset
-set_location_assignment PIN_AB28 -to top.sw[0]
-set_location_assignment PIN_AC28 -to top.sw[1]
+set_location_assignment PIN_AB28 -to sw[0]
+set_location_assignment PIN_AC28 -to sw[1]
+
 # Map the extra pin you provided to the reset input
-set_location_assignment PIN_AC27 -to top.rst
+set_location_assignment PIN_AC27 -to rst
 
 # System clock
-set_location_assignment PIN_Y2   -to top.clk
+set_location_assignment PIN_Y2   -to clk
 
 # End of pins.tcl
