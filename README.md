@@ -1,5 +1,7 @@
+#remember to log out of lab computer!!!
+```
 # DSDlab6
-
+```
 Repository for Digital Systems Design lab 6.
 
 This repo contains the `lab6_kg` Quartus project scaffold (Cyclone IV E EP4CE115F29C7) under the `lab6_kg` subfolder.
